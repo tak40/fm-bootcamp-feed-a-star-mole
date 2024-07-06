@@ -1,0 +1,39 @@
+/* GLOBAL STYLES */
+* {
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #f4f4f4;
+  background-image: url("../assets/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* HEADER  */
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 20px;
+}
+
+.cartoon-fun {
+  font-family: "Fredoka One", cursive;
+  color: #ff4500;
+  font-size: 4em;
+  text-shadow: -2px -2px 0 #ffd700, 2px -2px 0 #ffd700, -2px 2px 0 #ffd700,
+    2px 2px 0 #ffd700, 4px 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+header img {
+  width: 7em;
+  height: auto;
+}
