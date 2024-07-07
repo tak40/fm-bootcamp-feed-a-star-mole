@@ -74,9 +74,9 @@ main {
   margin: 0 auto;
 }
 
-/* .hidden {
+.hidden {
   visibility: hidden;
-} */
+}
 
 .game-board {
   display: flex;
