@@ -5,6 +5,9 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
@@ -16,24 +19,78 @@ body {
 }
 
 /* HEADER  */
-
 header {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-  padding-top: 20px;
+  gap: 1em;
+  padding: 10px 20px;
 }
 
 .cartoon-fun {
   font-family: "Fredoka One", cursive;
   color: #ff4500;
-  font-size: 4em;
+  font-size: 3em;
+  margin: 0.25em 0;
   text-shadow: -2px -2px 0 #ffd700, 2px -2px 0 #ffd700, -2px 2px 0 #ffd700,
     2px 2px 0 #ffd700, 4px 4px 5px rgba(0, 0, 0, 0.5);
 }
 
 header img {
-  width: 7em;
+  width: 5em; /* Reduced size */
   height: auto;
+}
+
+/* MAIN  */
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.worm-meter {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  text-align: center;
+  margin: 0;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.worm-meter h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: #ff4500;
+  text-shadow: 2px 2px 0 #ffd700;
+}
+
+.worm-meter .progress-bar {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.game-board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+  gap: 1.5em;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.hole {
+  flex: 1 1 calc(20% - 1.5em); /* 20% width minus the gap */
+  max-width: calc(20% - 1.5em);
+  padding-top: 20%; /* Maintain square aspect ratio */
+  position: relative;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+footer {
+  text-align: center;
+  padding: 0.5em 0;
+  background: rgba(255, 255, 255, 0.8);
 }
