@@ -12,13 +12,14 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-color: #f4f4f4;
+  background-color: #c0c86d;
   background-image: url("../assets/background.png");
   background-size: cover;
   background-repeat: no-repeat;
+  cursor: url("../assets/cursor.png"), default;
 }
 
-/* HEADER  */
+/* HEADER */
 header {
   display: flex;
   justify-content: center;
@@ -41,7 +42,7 @@ header img {
   height: auto;
 }
 
-/* MAIN  */
+/* MAIN */
 main {
   display: flex;
   flex-direction: column;
@@ -85,19 +86,41 @@ main {
   gap: 1.5em;
   width: 80%;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1920px;
+  max-height: 1080px;
+}
+
+.hole-container {
+  flex: 1 1 calc(20% - 1.5em); /* 20% width minus the gap */
+  max-width: calc(20% - 1.5em);
 }
 
 .hole {
-  flex: 1 1 calc(20% - 1.5em); /* 20% width minus the gap */
-  max-width: calc(20% - 1.5em);
-  padding-top: 20%; /* Maintain square aspect ratio */
+  width: 100%;
+  padding-top: 100%; /* Maintain square aspect ratio */
   position: relative;
   background: rgba(255, 255, 255, 0.5);
   border-radius: 50%;
 }
 
-/* FOOTER  */
+.hole img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hungry {
+  cursor: url("../assets/cursor-worm.png"), default;
+}
+
+.gone {
+  display: none;
+}
+
+/* FOOTER */
 footer {
   text-align: center;
   padding: 0.5em 0;
