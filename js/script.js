@@ -94,4 +94,24 @@ function gameLoop() {
 }
 
 // Start the game loop
-// requestAnimationFrame(gameLoop);
+requestAnimationFrame(gameLoop);
+
+// event listener for the moles
+// add point system
+
+let score = 0;
+
+document.querySelectorAll(".mole").forEach((moleElement) => {
+  moleElement.addEventListener("click", (e) => {
+    const index = e.target.dataset.index;
+    const mole = moles[index];
+
+    if (mole.state === "hungry") {
+      score += mole.king ? 2 : 1;
+      mole.state = "fed";
+      mole.next = getFedInterval();
+    }
+
+    console.log(score);
+  });
+});
