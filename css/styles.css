@@ -64,14 +64,16 @@ main {
 .worm-meter h2 {
   margin: 0;
   font-family: "Luckiest Guy", cursive;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #ff4500;
   text-shadow: 2px 2px 0 #ffd700;
 }
 
-.worm-meter .progress-bar {
-  width: 60%;
-  margin: 0 auto;
+.worm-meter-progress {
+  height: 100%;
+  width: 80%;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.5s ease; /* Smooth transition */
 }
 
 .hidden {

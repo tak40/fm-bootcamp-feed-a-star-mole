@@ -113,5 +113,18 @@ document.querySelectorAll(".mole").forEach((moleElement) => {
     }
 
     console.log(score);
+    updateWormMeter();
   });
 });
+
+// Worm meter
+
+const wormMeterProgress = document.querySelector(".worm-meter-progress");
+const maxScore = 10;
+
+// Function to update the worm meter
+function updateWormMeter() {
+  const clipValue = 100 - (score / maxScore) * 100;
+  wormMeterProgress.style.clipPath = `inset(0 ${clipValue}% 0 0)`;
+  wormMeterProgress.classList.remove("hidden"); // Ensure worm meter is visible
+}
