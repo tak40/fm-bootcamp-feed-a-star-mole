@@ -128,3 +128,13 @@ footer {
   padding: 0.5em 0;
   background: rgba(255, 255, 255, 0.8);
 }
+
+/* END GAME */
+.end-game {
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
+  background-image: url(../assets/win.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}

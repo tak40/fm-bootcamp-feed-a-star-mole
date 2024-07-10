@@ -55,6 +55,9 @@ function showMole(mole) {
   if (mole.state === "gone" && now > mole.next) {
     mole.state = "hungry";
     mole.next = getHungryInterval();
+  } else if (mole.state === "fed" && now > mole.next) {
+    mole.state = "gone";
+    mole.next = getGoneInterval();
   } else if (mole.state === "hungry" && now > mole.next) {
     mole.state = "sad";
     mole.next = getSadInterval();
@@ -72,7 +75,7 @@ function showMole(mole) {
 // Function to render moles (placeholder for actual DOM manipulation)
 function renderMole(mole) {
   const moleElement = document.querySelector(`#hole-${mole.id} .mole`);
-  if (mole.state === "gone" || mole.state === "leaving") {
+  if (mole.state === "gone") {
     moleElement.classList.add("hidden");
   } else {
     moleElement.classList.remove("hidden");
@@ -111,8 +114,6 @@ document.querySelectorAll(".mole").forEach((moleElement) => {
       mole.state = "fed";
       mole.next = getFedInterval();
     }
-
-    console.log(score);
     updateWormMeter();
   });
 });
@@ -127,4 +128,17 @@ function updateWormMeter() {
   const clipValue = 100 - (score / maxScore) * 100;
   wormMeterProgress.style.clipPath = `inset(0 ${clipValue}% 0 0)`;
   wormMeterProgress.classList.remove("hidden"); // Ensure worm meter is visible
+  if (score >= maxScore) {
+    endGame();
+  }
+}
+
+function endGame() {
+  // Hide previous elements
+  document.querySelector(".worm-meter").style.display = "none";
+  document.querySelector(".game-board").style.display = "none";
+
+  // Change main background to win.png
+  const main = document.querySelector("main");
+  main.classList.add("end-game");
 }
