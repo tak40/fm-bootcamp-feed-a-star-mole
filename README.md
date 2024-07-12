@@ -41,19 +41,22 @@ To get a local copy up and running, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/tak40/fm-bootcamp-feed-a-star-mole.git
+   git clone https://github.com/tak40/fm-bootcamp-feed-a-star-mole
    ```
 2. Navigate to the project directory:
    ```bash
-   cd feed-a-star-mole
+   cd fm-bootcamp-feed-a-star-mole
    ```
 3. Open `index.html` in your preferred web browser.
 
-## Usage
+## How to Play
 
-- Click on the hungry moles to feed them and earn points.
-- The worm meter at the top indicates your progress.
-- When the maximum score is reached, the game will display a win screen.
+1. Moles will appear in the holes in a random sequence.
+2. Click on the hungry moles to feed them.
+3. Each fed mole increases your score:
+   - Regular moles give 1 point.
+   - King moles give 2 points.
+4. Fill the worm meter to the top by scoring 10 or more points to win the game.
 
 ## Acknowledgments
 
