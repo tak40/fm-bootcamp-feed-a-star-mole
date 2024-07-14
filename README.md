@@ -6,6 +6,8 @@ Feed A Star Mole is a fun and interactive game where players aim to feed as many
 
 In this game, players must click on moles that appear randomly in different states: hungry, sad, leaving, and gone. The goal is to feed the moles to earn points. The game ends when the player reaches a maximum score, triggering an end screen.
 
+![Feed A Star Mole Screenshot](./assets/screenshot.png.png)
+
 ### Game Logic
 
 - **Mole States**: Moles appear randomly but follow a specific order: hungry, sad, leaving, and gone.
