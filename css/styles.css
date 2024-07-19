@@ -1,7 +1,6 @@
 /* GLOBAL STYLES */
 * {
   box-sizing: border-box;
-  /* border: 1px solid red; */
 }
 
 body {
@@ -43,7 +42,7 @@ header img {
 }
 
 /* MAIN */
-main {
+.container {
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -131,10 +130,10 @@ footer {
 
 /* END GAME */
 .end-game {
-  width: 60%;
-  height: auto;
-  margin: 0 auto;
+  width: 100%;
+  height: 80vh;
   background-image: url(../assets/win.png);
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
 }

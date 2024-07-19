@@ -114,7 +114,7 @@ requestAnimationFrame(gameLoop);
 // event listener for the moles
 // add point system
 
-let score = 0;
+let score = 10;
 
 document.querySelectorAll(".mole").forEach((moleElement) => {
   moleElement.addEventListener("click", (e) => {

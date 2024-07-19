@@ -1,4 +1,4 @@
-# Feed A Star Mole
+# Frontend Masters Bootcamp: Feed A Star Mole Project
 
 Feed A Star Mole is a fun and interactive game where players aim to feed as many moles as possible. This project was developed as a final project for the Frontend Masters Bootcamp.
 
@@ -7,6 +7,10 @@ Feed A Star Mole is a fun and interactive game where players aim to feed as many
 In this game, players must click on moles that appear randomly in different states: hungry, sad, leaving, and gone. The goal is to feed the moles to earn points. The game ends when the player reaches a maximum score, triggering an end screen.
 
 ![Feed A Star Mole Screenshot](./assets/screenshot.png)
+
+## Live Site
+
+You can view the live versio of the project [here](https://feed-a-star-mole.netlify.app/).
 
 ### Game Logic
 
